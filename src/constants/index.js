@@ -100,4 +100,20 @@ export const roadmap = [
     imageUrl: roadmap1,
     colorful: true,
   },
+  {
+    id: "1",
+    title: "Gamification",
+    text: "Add game-like elements, such as badges or leaderboards, to incentivize users to engage with the chatbot more frequently.",
+    date: "June 2024",
+    status: "progress",
+    imageUrl: roadmap2,
+  },
+  {
+    id: "2",
+    title: "Chatbot customization",
+    text: "Allow users to customize the chatbot's appearance and behavior, making it more engaging and fun to interact with.",
+    date: "May 2024",
+    status: "done",
+    imageUrl: roadmap3,
+  },
 ];
