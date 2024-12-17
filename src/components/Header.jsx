@@ -1,4 +1,5 @@
 import { brainwave } from "../assets";
+import { navigation } from "../constants";
 
 const Header = () => {
   return (
@@ -15,7 +16,15 @@ const Header = () => {
         bg-n-8 lg:static lg:flex lg:mx-auto lg:bg-transparent"
         >
           <div className="relative z-2 flex flex-col items-center justify-center m-auto lg:flex-row">
-            1 2 3
+            {navigation.map((item) => (
+              <a
+                key={item.id}
+                href={item.url}
+                className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1`}
+              >
+                {item.title}
+              </a>
+            ))}
           </div>
         </nav>
       </div>
