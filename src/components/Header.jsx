@@ -8,7 +8,19 @@ import { useState } from "react";
 
 const Header = () => {
   const pathname = useLocation();
-  const [openNavigation, setOpenNavigation] = useState(true);
+  const [openNavigation, setOpenNavigation] = useState(false);
+
+  const toggleNavigation = () => {
+    if (openNavigation) {
+      setOpenNavigation(false);
+    } else {
+      setOpenNavigation(true);
+    }
+  };
+
+  const handleClick = () => {
+    setOpenNavigation(false);
+  };
 
   return (
     <div
@@ -44,8 +56,8 @@ const Header = () => {
                 {item.title}
               </a>
             ))}
-            <HamburgerMenu />
           </div>
+          <HamburgerMenu />
         </nav>
         <a
           href="#signup"
@@ -55,6 +67,14 @@ const Header = () => {
         </a>
         <Button className="hidden lg:flex" href="#login">
           Sign In
+        </Button>
+
+        <Button
+          className="ml-auto lg:hidden"
+          px="px-3"
+          onClick={toggleNavigation}
+        >
+          <MenuSvg openNavigation={openNavigation} />
         </Button>
       </div>
     </div>
