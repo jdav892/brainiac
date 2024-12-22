@@ -6,8 +6,11 @@ import heroBackground from "../assets/hero/hero-background.jpg";
 import { BackgroundCircles, BottomLine, Gradient } from "./design/Hero";
 import { heroIcons } from "../constants";
 import { ScrollParallax } from "react-just-parallax";
+import { useRef } from "react";
 
 const Hero = () => {
+  const parallaxRef = useRef(null);
+
   return (
     <Section
       className="pt-[12rem] -mt-[5.25rem]"
@@ -16,7 +19,7 @@ const Hero = () => {
       customPaddings
       id="hero"
     >
-      <div className="container relative">
+      <div className="container relative" ref={parallaxRef}>
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb:[6rem]">
           <h1 className="h1 mb-6">
             Explore the Possibilities of AI Chatting with Brainwave
@@ -51,6 +54,15 @@ const Hero = () => {
                   height={490}
                   alt="AI"
                 />
+                <ScrollParallax isAbsolutelyPositioned>
+                  <ul className="hidden absolute -left-[5.5rem] bottom-[7.5rem] px-1 py-1 bg-n-9/40 backdrop=blur border border-n-1/10 rounded-2xl xl:flex">
+                    {heroIcons.map((icon, index) => (
+                      <li className="p-5" key={index}>
+                        <img src={icon} width={24} height={25} alt={icon} />
+                      </li>
+                    ))}
+                  </ul>
+                </ScrollParallax>
               </div>
             </div>
           </div>
