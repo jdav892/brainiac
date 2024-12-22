@@ -1,5 +1,6 @@
 import Section from "./Section";
 import curve from "../assets/hero/curve.png";
+import Button from "../components/Button";
 
 const Hero = () => {
   return (
@@ -25,10 +26,13 @@ const Hero = () => {
               />
             </span>
           </h1>
-          <p>
+          <p className="body-1 max-w-3xl mx-auto mb-6 text-n-2 lg:mb-8">
             Unleash the power of AI within Brainwave. Upgrade your productivity
             with Brainwave, the free, and open AI chat application.
           </p>
+          <Button href="/pricing" white>
+            Get Started
+          </Button>
         </div>
       </div>
     </Section>
