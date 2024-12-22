@@ -1,7 +1,8 @@
 import Section from "./Section";
 import curve from "../assets/hero/curve.png";
 import Button from "../components/Button";
-import { robot } from "../assets";
+import robot from "../assets/hero/robot.jpg";
+import heroBackground from "../assets/hero/hero-background.jpg";
 
 const Hero = () => {
   return (
@@ -39,16 +40,19 @@ const Hero = () => {
           <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
             <div className="relative bg-n-8 rounded-[1rem]">
               <div className="h-[1.4rem] bg-n-10 rounded-t-[0.9rem]" />
-              <div>
-                <img
-                  src={robot}
-                  className="w-full"
-                  width={1440}
-                  height={1800}
-                  alt="hero"
-                />
+              <div className="aspect-[33/140] rounded-b-[0.09] overflow-hidden md:aspect-[688/490] lg:aspect-[1024/490]">
+                <img src={robot} className="w-full" />
               </div>
             </div>
+          </div>
+          <div>
+            <img
+              src={heroBackground}
+              className="w-full"
+              width={1440}
+              height={1800}
+              alt="hero"
+            />
           </div>
         </div>
       </div>
