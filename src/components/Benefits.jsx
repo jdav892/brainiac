@@ -1,7 +1,7 @@
-import React from "react";
+import Section from "./Section";
 
 const Benefits = () => {
-  return <div>Benefits</div>;
+  return <Section>Benefits</Section>;
 };
 
 export default Benefits;
