@@ -23,6 +23,10 @@
   }
 }
 
+.rotate-0 {
+  @apply rotate-[0deg];
+}
+
 .rotate-45 {
   @apply rotate-[45deg];
 }
@@ -43,7 +47,7 @@
   @apply rotate-[225deg];
 }
 
-.rotate270 {
+.rotate-270 {
   @apply rotate-[270deg];
 }
 
