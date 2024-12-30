@@ -228,6 +228,17 @@ export const pricing = [
       "Priority support to solve issues quickly",
     ],
   },
+  {
+    id: "2",
+    title: "Enterprise",
+    description: "Custom AI chatbot, advanced analytics, dedicated account",
+    price: null,
+    features: [
+      "An AI chatbot that can understand your queries",
+      "Personalized recommendations based on your preferences",
+      "Ability to explore the app and its features without any cost",
+    ],
+  },
 ];
 
 export const benefits = [
